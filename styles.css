@@ -1,0 +1,442 @@
+/* =========================
+   Base
+========================= */
+:root{
+  --bg: #f4f4f4;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand: #2c3e50;
+  --brand-2: #34495e;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --radius: 14px;
+
+
+  
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+
+}
+
+
+
+
+
+
+
+
+img{ max-width: 100%; display: block; }
+
+/* =========================
+   Page Layout (GRID)
+   header, main, footer are grid items
+========================= */
+.page{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* =========================
+   Header (Flexbox)
+========================= */
+.site-header{
+  background: var(--brand);
+  color: white;
+  border-bottom: 4px solid rgba(255,255,255,0.08);
+}
+
+.header-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 16px;
+  display: flex;            /* Flexbox */
+  align-items: center;      /* Flexbox alignment */
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand{
+  display: flex;            /* Flexbox */
+  align-items: center;
+  gap: 12px;
+}
+
+.logo{
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: white;
+  padding: 4px;
+}
+
+.brand-text h1{
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+}
+.tagline{
+  margin: 2px 0 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+/* Nav (Flexbox list) */
+.site-nav .nav-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;            /* Flexbox */
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-nav a{
+  display: inline-block;
+  padding: 10px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+.site-nav a:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+/* =========================
+   Main
+========================= */
+.site-main{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 16px 44px;
+  width: 100%;
+}
+
+.section{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+.section-head{
+  margin-bottom: 14px;
+}
+.section-head h2{
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+.section-head p{
+  margin: 0;
+  color: var(--muted);
+}
+
+/* =========================
+   Hero (Grid + Flex)
+========================= */
+.hero{
+  overflow: hidden;
+}
+.hero-inner{
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.hero-text h2{
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+.cta-row{
+  display: flex;            /* Flexbox */
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0 10px;
+}
+
+.btn{
+  appearance: none;
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;     /* Flexbox */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover{ filter: brightness(0.95); }
+
+.btn-outline{
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.quick-facts{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.hero-media{
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+}
+.hero-media img{
+  border-radius: 12px;
+}
+.hero-media figcaption{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Cards (Flexbox inside each card)
+========================= */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;            /* Flexbox */
+  flex-direction: column;
+  background: white;
+}
+
+.card img{
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-body{
+  padding: 14px;
+  display: flex;            /* Flexbox */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-body h3{
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-body p{
+  margin: 0;
+  color: var(--muted);
+}
+
+.chip-row{
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 0;
+  display: flex;            /* Flexbox */
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip{
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: #f9fafb;
+}
+
+/* =========================
+   About (FLOAT to wrap text)
+========================= */
+.about-wrap{
+  font-size: 1rem;
+}
+
+.float-photo{
+  float: left;              /* Floating element */
+  width: 220px;
+  margin: 0 14px 10px 0;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.clear{ clear: both; }
+
+/* =========================
+   Projects (Flexbox rows)
+========================= */
+.project-list{
+  display: flex;            /* Flexbox */
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;            /* Flexbox */
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-info h3{
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+.project-info p{
+  margin: 0;
+  color: var(--muted);
+}
+
+.badge{
+  border-radius: 999px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  background: #f9fafb;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   Contact (Grid + Flex)
+========================= */
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.contact-card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: #f9fafb;
+}
+
+.contact-list{
+  padding-left: 18px;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.contact-form{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;            /* Flexbox */
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label{
+  display: flex;            /* Flexbox */
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+}
+
+input, textarea{
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+input:focus, textarea:focus{
+  border-color: rgba(37,99,235,0.6);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer{
+  background: var(--brand);
+  color: white;
+}
+
+.footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+.small{
+  margin: 6px 0 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.92rem;
+}
+
+/* =========================
+   Responsive (Media Queries)
+========================= */
+/* Tablet */
+@media (max-width: 900px){
+  .hero-inner{
+    grid-template-columns: 1fr;
+  }
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px){
+  .header-inner{
+    justify-content: center;
+    text-align: center;
+  }
+  .brand{
+    justify-content: center;
+  }
+  .site-nav .nav-list{
+    justify-content: center;
+  }
+  .card-grid{
+    grid-template-columns: 1fr;
+  }
+  .float-photo{
+    float: none;            /* disable float on small screens */
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .project{
+    flex-direction: column; /* stack on mobile */
+    align-items: flex-start;
+  }
+}

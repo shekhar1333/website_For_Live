@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shekhar Biswas | Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8291KB4KF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K8291KB4KF');
+</script>
+</head>
+
+<body class="page">
+  <!-- Grid item: Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="logo" src="images/logo.png" alt="Site logo" />
+        <div class="brand-text">
+          <h1>Shekhar Biswas</h1>
+          <p class="tagline">Student • Technology Enthusiast • Lifelong Learner</p>
+        </div>
+      </div>
+
+      <!-- Flexbox nav -->
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Grid item: Main -->
+  <main class="site-main">
+    <!-- Hero -->
+    <section id="home" class="section hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h2>Welcome to My Personal Website</h2>
+          <p>
+            This page is built with <strong>CSS Grid</strong> for the overall layout and
+            <strong>Flexbox</strong> for aligning components. It also includes responsive
+            <strong>media queries</strong> for mobile, tablet, and desktop.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn-outline" href="#contact">Contact Me</a>
+          </div>
+          <ul class="quick-facts">
+            <li><strong>Focus:</strong> IT / Web Development</li>
+            <li><strong>Location:</strong> Washington, D.C.</li>
+            <li><strong>Goal:</strong> Build real-world tech skills</li>
+          </ul>
+        </div>
+
+        <figure class="hero-media">
+          <img src="images/hero.jpg" alt="A clean workspace and laptop" />
+          <figcaption>Learning by building and improving.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Courses (Flex cards) -->
+    <section id="courses" class="section">
+      <div class="section-head">
+        <h2>Current Courses</h2>
+        <p>Here are a few topics I am focusing on this semester.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/section1.jpg" alt="Course illustration" />
+          <div class="card-body">
+            <h3>Web Design</h3>
+            <p>HTML, CSS, accessibility, responsive layout, and modern UI patterns.</p>
+            <ul class="chip-row">
+              <li class="chip">Grid</li>
+              <li class="chip">Flexbox</li>
+              <li class="chip">Media Queries</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/section2.jpg" alt="Course illustration" />
+          <div class="card-body">
+            <h3>Programming Basics</h3>
+            <p>Problem-solving, algorithms, debugging, and building small apps.</p>
+            <ul class="chip-row">
+              <li class="chip">Python</li>
+              <li class="chip">Logic</li>
+              <li class="chip">Practice</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/section3.jpg" alt="Course illustration" />
+          <div class="card-body">
+            <h3>Cybersecurity Foundations</h3>
+            <p>Security principles, threats, and safe practices for everyday computing.</p>
+            <ul class="chip-row">
+              <li class="chip">Privacy</li>
+              <li class="chip">Risk</li>
+              <li class="chip">Basics</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About (float text wrap demo) -->
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p>A quick introduction and what I’m working on.</p>
+      </div>
+
+      <div class="about-wrap">
+        <img class="float-photo" src="images/section4.jpg" alt="Profile style image" />
+        <p>
+          I am Shekhar Biswas, and I enjoy learning new technologies and turning ideas into
+          simple, useful web pages. In my free time, I practice building layouts, improving
+          typography, and experimenting with clean UI components.
+        </p>
+        <p>
+          The image on the left uses a <strong>floating element</strong> so the text wraps
+          around it. This is useful for blog-style pages and article layouts.
+        </p>
+        <p>
+          My next step is to build a small portfolio with a few completed mini-projects,
+          a short resume, and a contact form.
+        </p>
+        <div class="clear"></div>
+      </div>
+    </section>
+
+    <!-- Projects (Flex list) -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Mini Projects</h2>
+        <p>Small projects I can build and improve during this course.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project">
+          <div class="project-info">
+            <h3>Responsive Landing Page</h3>
+            <p>Create a mobile-first landing page with hero, features, and footer.</p>
+          </div>
+          <span class="badge">HTML/CSS</span>
+        </article>
+
+        <article class="project">
+          <div class="project-info">
+            <h3>Simple Portfolio</h3>
+            <p>One-page portfolio with sections, smooth navigation, and clean design.</p>
+          </div>
+          <span class="badge">Grid + Flex</span>
+        </article>
+
+        <article class="project">
+          <div class="project-info">
+            <h3>Form + Validation (Basic)</h3>
+            <p>Contact form layout with clear labels, spacing, and friendly UX.</p>
+          </div>
+          <span class="badge">UX</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>If you want to connect, feel free to send a message.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Quick Info</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> shekharbiswas133@gmail.com</li>
+            <li><strong>Program:</strong> Information Technology</li>
+            <li><strong>Interest:</strong> Web + Security</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <label>
+            Your Name
+            <input type="text" name="name" placeholder="Enter your name" required />
+          </label>
+          <label>
+            Your Email
+            <input type="email" name="email" placeholder="Enter your email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Write your message..." required></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+ <script src="js/main.js"> </script>
+  <!-- Grid item: Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Shekhar Biswas • Class Web Project</p>
+      <p class="small">Built with CSS Grid, Flexbox, media queries, and a floating image wrap.</p>
+    </div>
+  </footer>
+</body>
+</html>
